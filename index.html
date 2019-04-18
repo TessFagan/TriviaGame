@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12" style="color:#4aaaa5">
+                    <h2>Dungeons and Dragons Trivia 🐉</h2>
+                    <hr \>
+                    <div id="state1">
+                        <div class="button">
+                            <button type="button" id="startbutton">
+                                <h3>Start</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="state2" class="off">
+                        <div id="timeremaining">
+                            <h3>Time Remaining:</h3>
+                            <h3 id="seconds"></h3>
+                        </div>
+                        <div id="quizquestions">
+                            <h3>quiz questions here</h3>
+                            <p>Question 1</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Default radio
+                                </label>
+                            </div>
+                            <br>
+                            <br>
+                            <p>Question 2</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Second default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Default radio
+                                </label>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button" id="donebutton">
+                                <h3>Done</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="state3" class="off">
+                        <h3>All Done!</h3>
+                        <div id="correct">
+                            <h3>Correct:</h3>
+                        </div>
+                        <div id="incorrect">
+                            <h3>Incorrect:</h3>
+                        </div>
+
+                        <div id="unanswered">
+                            <h3>Unanswered:</h3>
+                        </div>
+
+                        <div class="button">
+                            <button type="button" id="playagainbutton">
+                                <h3>Play Again!</h3>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="clearfix"></div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/./javascript/app.js"></script>
+
+</body>
+
+</html>
