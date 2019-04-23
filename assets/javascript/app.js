@@ -1,17 +1,17 @@
 var state = 1
 var intervalId;
 console.log(state)
-var maxtime = 5
-// FOR NOW ITS 5 FOR MY SANITY
+var maxtime = 15
+// FOR NOW ITS 15 FOR MY SANITY
 
 // toggle states
 $("#startbutton").click(function () {
     $("#state2").toggleClass("off")
     $("#state1").toggleClass("off")
     state = 2
-    console.log(state)
+    console.log(state);
     generatequiz()
-    console.log($("#hello"))
+    console.log("hello");
 
     var counter = maxtime
 
@@ -32,12 +32,12 @@ $("#startbutton").click(function () {
 });
 
 $("#donebutton").click(function () {
-    $("#state2").toggleClass("off")
-    $("#state3").toggleClass("off")
-    state = 3
-    console.log(state)
     clearInterval(intervalId);
     $("#seconds").text(maxtime);
+    $("#state2").toggleClass("off");
+    $("#state3").toggleClass("off");
+    state = 3
+    console.log(state)
 });
 
 $("#playagainbutton").click(function () {
@@ -109,21 +109,34 @@ var arrayofquestions = [q1, q2, q3, q4, q5]
 //     }
 // }
 
-// console.log(q1)
-// console.log(arrayofquestions[1].questiontext[1])
-
 // dynamically create quiz questions  with jquery
+function generatequiz() {
 
- //   <td>`+ response.Title + `</td>
-    //   <td>`+ response.Year + `</td>
-    //   <td>`+ response.Actors + `</td>
-
-
-
-    // input type="radio" id="q1.1" value =` + q1.choice1[1] + `">` + q1.choice1[0] + `</input>
-    //         <input type="radio" id="q1.2" value =` + q1.choice2[1] + `">` + q1.choice2[0] + `</input>
-    //         <input type="radio" id="q1.3" value =` + q1.choice3[1] + `">` + q1.choice3[0] + `</input>
-
-
-
-
+    for (var i = 0; i < arrayofquestions.length; i++) {
+        $("#quizcontent").append(`
+        <div class="form-check">
+            <p> Question: ${arrayofquestions[i].questiontext[0]}</p>
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+            value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+            Option 1: ${arrayofquestions[i].choice1[0]}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+            value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+            Option 2: ${arrayofquestions[i].choice2[0]}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+            value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+            Option 3: ${arrayofquestions[i].choice3[0]}
+            </label>
+        </div>
+        <br>
+        `)
+    }
+}
