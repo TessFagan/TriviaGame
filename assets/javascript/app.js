@@ -1,8 +1,8 @@
 var state = 1
 var intervalId;
 console.log(state)
-var maxtime = 15
-// FOR NOW ITS 15 FOR MY SANITY
+var maxtime = 60
+// FOR NOW ITS 60 FOR TESTING
 
 // toggle states
 $("#startbutton").click(function () {
@@ -114,25 +114,25 @@ function generatequiz() {
 
     for (var i = 0; i < arrayofquestions.length; i++) {
         $("#quizcontent").append(`
+        <p> Question: ${arrayofquestions[i].questiontext[0]}</p>
         <div class="form-check">
-            <p> Question: ${arrayofquestions[i].questiontext[0]}</p>
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-            value="option1" checked>
-            <label class="form-check-label" for="exampleRadios1">
+            <input class="form-check-input" type="radio" name="${[i] + 1}"
+            id="option1">
+            <label class="form-check-label" for="option1">
             Option 1: ${arrayofquestions[i].choice1[0]}
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-            value="option1" checked>
-            <label class="form-check-label" for="exampleRadios1">
+            <input class="form-check-input" type="radio" name="${[i] + 1}
+            id="option2">
+            <label class="form-check-label" for="option2">
             Option 2: ${arrayofquestions[i].choice2[0]}
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-            value="option1" checked>
-            <label class="form-check-label" for="exampleRadios1">
+            <input class="form-check-input" type="radio" name="${[i] + 1}
+            id="option3">
+            <label class="form-check-label" for="option3">
             Option 3: ${arrayofquestions[i].choice3[0]}
             </label>
         </div>
