@@ -123,14 +123,14 @@ function generatequiz() {
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="${[i] + 1}
+            <input class="form-check-input" type="radio" name="${[i] + 1}"
             id="option2">
             <label class="form-check-label" for="option2">
             Option 2: ${arrayofquestions[i].choice2[0]}
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="${[i] + 1}
+            <input class="form-check-input" type="radio" name="${[i] + 1}"
             id="option3">
             <label class="form-check-label" for="option3">
             Option 3: ${arrayofquestions[i].choice3[0]}
